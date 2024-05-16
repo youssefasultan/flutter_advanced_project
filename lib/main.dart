@@ -1,20 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_project/core/routing/app_router.dart';
+import 'package:flutter_complete_project/doc_app.dart';
 
 void main() {
-  runApp(const MainApp());
-}
-
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  runApp(
+    DocApp(
+      appRouter: AppRouter(),
+    ),
+  );
 }
